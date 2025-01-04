@@ -1,0 +1,1 @@
+torch.save(model.state_dict(), vaePath) added to the code, line 352. 

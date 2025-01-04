@@ -1,0 +1,32 @@
+﻿2024JRB2065
+2024JRB2025﻿Debangan Mandal : 2024JRB2065, Ratnakar Mishra : 2024JRB2025
+
+
+1. The ASR Corrector approach seeks the lowest-cost state. The agent uses a phoneme table, which maps phonemes to potential corrections, helping identify possible replacements for incorrectly recognized words. 
+
+
+2. Each step of the correction process is represented as a state, consisting of the current sentence, the word being modified, the index of the word in the sentence of the current state and character being corrected in the respective word, and the cost, a measure of how closely the sentence matches the desired output.
+
+
+3. To enhance phoneme correction, an inverted phoneme table is built, where characters map back to phonemes. This enables the agent to efficiently find potential corrections based on phonetic similarity.
+
+
+4. After each word modification, the agent checks whether the new sentence has a lower cost than the current best state. If so, the best state is updated accordingly. The agent explores multiple paths recursively, evaluating different phoneme combinations for cost improvement. If a lower-cost combination is found, the agent adopts it.
+
+
+5. Following phoneme corrections, the agent expands the sentence by adding words from a predefined vocabulary to both the beginning and the end of the sentence. It first attempts to find a word that fits at the beginning, then checks for a word to add at the end, continuously updating the best state by reducing the cost.
+
+
+6. The agent iterates through each word of the respective sentence, building a better state from each modified word, and modifies the statement as well.
+
+
+7. The agent explores multiple paths recursively, ensuring that all potential phoneme combinations are evaluated for cost improvement. If a combination with lesser cost is found, it moves to that combination.
+
+
+8. After phoneme corrections, the agent expands the sentence by adding words from a predefined vocabulary to the beginning as well as in the end.
+
+
+9. First, we try to get the word that is supposed to be added at the beginning of the statement, and then check for the word that is supposed to be at the end of the sentence. We are checking the possible words by continuously updating our best state by lowering the cost function.
+
+
+10. Initially, the agent focuses on correcting individual words, followed by attempts to globally adjust the sentence by adding vocabulary words.
